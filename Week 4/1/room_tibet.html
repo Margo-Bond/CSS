@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.svg"
+      type="image/svg"
+    />
+    <title>RoomTibet</title>
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <div class="logo">
+          <div>
+            <img src="./assets/images/logo.svg" alt="Логотип" />
+          </div>
+          <div>
+            <img src="./assets/images/name.png" alt="Название" />
+          </div>
+        </div>
+        <nav class="navigation">
+          <div>Главная</div>
+          <div>Про гида</div>
+          <div>Программа тура</div>
+          <div>Стоимость</div>
+          <div>Блог</div>
+          <div>Контакты</div>
+        </nav>
+        <div>
+          <button class="button-nav">Консультация</button>
+        </div>
+      </div>
+      <div class="slogan">
+        Насладись прогулкой в горах с командой единомышленников
+      </div>
+      <div class="area">
+        <div class="workspace">
+          <div class="conteiner">
+            <div class="select">
+              <form>
+                <label for="location">Локация для тура</label>
+                <select name="location" id="location"></select>
+              </form>
+            </div>
+            <div class="undertext">Выберите из списка</div>
+          </div>
+          <div class="conteiner">
+            <div class="select">
+              <form>
+                <label for="date">Дата похода</label>
+                <input type="date" name="date" id="date" />
+              </form>
+            </div>
+            <div class="undertext">Укажите диапазон</div>
+          </div>
+          <div class="conteiner">
+            <div class="select">
+              <form>
+                <label for="participants">Участники</label>
+                <select name="participants" id="participants"></select>
+              </form>
+            </div>
+            <div class="undertext">Минимум 4 человека</div>
+          </div>
+          <div>
+            <button class="button-header">Найти программу</button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

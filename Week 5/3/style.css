@@ -1,0 +1,98 @@
+body {
+  background-image: url('./assets/images/background.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+
+/**Шапка**/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin: 21px auto;
+}
+
+.logo {
+  text-align: left;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav {
+  display: inline-flex;
+  justify-content: space-around;
+  margin-right: 15px;
+}
+
+.nav-a a {
+  display: block;
+  text-decoration: none;
+  margin: 0px 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/**Галерея**/
+.main-flexbox {
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px 20px 20px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  display: flex;
+  margin-top: 80px;
+}
+
+.all-objects {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.main-flex-item {
+  display: flex;
+  text-align: center;
+}
+
+.main-flex-item-glasses {
+  display: flex;
+  align-items: end;
+  text-align: center;
+}
+
+.figure-glasses img {
+  height: 150px;
+}
+
+.figure img {
+  height: 250px;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.figure:hover .tooltip-text,
+.figure-glasses:hover .tooltip-text {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: auto;
+  background-color: #4d3858;
+  color: #fff;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+}
