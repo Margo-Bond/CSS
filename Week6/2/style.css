@@ -1,0 +1,99 @@
+/* Весь контейнер */
+.all-container {
+  display: grid;
+  grid-template-rows: [row1-start] 100px [row2-start] 1fr [row3-start] 130px [row3-end];
+  grid-template-columns: [header-start main-start] 70% [main-end sidebar-start] 30% [sidebar-end header-end];
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 600px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(70, 69, 69);
+}
+
+/* Шапка */
+.header {
+  display: grid;
+  grid-row: row1-start/row2-start;
+  grid-column: header-start/header-end;
+  background-color: rgba(196, 206, 218, 0.4);
+  justify-items: center;
+  align-items: center;
+}
+
+/* Контент */
+.container-main {
+  display: grid;
+  grid-row: row2-start/row3-start;
+  grid-column: main-start/main-end;
+  grid-template-rows: [row2-start] 1fr [extrarow-start] 1fr [extrarow-end] 1fr [row3-start];
+  grid-template-columns: [main-start] 1fr [mediumcolumn-start] 1fr [main-end];
+  gap: 20px 40px;
+  padding: 20px;
+  background-color: white;
+  background-color: rgba(254, 233, 233, 0.3);
+}
+
+.section {
+  display: grid;
+  grid-row: row2-start/extrarow-start;
+  grid-column: main-start/main-end;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.article {
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(247, 219, 158, 0.3);
+}
+
+.article1 {
+  display: grid;
+  grid-row: extrarow-start/extrarow-end;
+  grid-column: main-start/mediumcolumn-start;
+}
+
+.article2 {
+  display: grid;
+  grid-row: extrarow-start/extrarow-end;
+  grid-column: mediumcolumn-start/main-end;
+}
+
+.article3 {
+  display: grid;
+  grid-row: extrarow-end/row3-start;
+  grid-column: main-start/main-end;
+}
+
+.sidebar {
+  display: grid;
+  grid-row: row2-start/row3-start;
+  grid-column: sidebar-start/sidebar-end;
+  text-align: center;
+  align-items: start;
+  padding: 45px 20px 20px 20px;
+  background-color: rgba(17, 245, 17, 0.1);
+}
+
+/* Подвал */
+.container-footer {
+  display: grid;
+  grid-row: row3-start/row3-end;
+  grid-column: header-start/header-end;
+  grid-template-rows: 130px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+  background-color: rgba(196, 206, 218, 0.4);
+}
+
+.block {
+  display: grid;
+  height: 4em;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
