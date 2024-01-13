@@ -18,6 +18,7 @@
   grid-template-rows: [row1-start] 50px [row2-start] 80px [row3-start] 760px [row4-start] 90px [row5-start] 200px [row5-end];
   grid-template-columns: [header-start] 1210px [header-end];
   justify-content: center;
+  min-width: 1210px;
   padding: 20px 0;
 }
 
