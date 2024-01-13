@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('https://fonts.gstatic.com');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}
+/* Весь контейнер */
+.all-containers {
+  display: grid;
+  grid-template-rows: [row1-start] 50px [row2-start] 80px [row3-start] 760px [row4-start] 90px [row5-start] 200px [row5-end];
+  grid-template-columns: [header-start] 1210px [header-end];
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Шапка */
+.header-container {
+  display: grid;
+  grid-row: row1-start/row2-start;
+  grid-column: header-start/header-end;
+  grid-template-columns: [header-start] 1fr [m-column-start] 300px [m-column-end] 2fr [header-end];
+}
+
+.logo {
+  display: inline-flex;
+  grid-row: row1-start/row2-start;
+  grid-column: header-start/m-column-start;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo p {
+  color: #292f36;
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+}
+.nav {
+  display: inline-flex;
+  grid-row: row1-start/row2-start;
+  grid-column: m-column-end/header-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  color: #292f36;
+}
+
+.nav .home {
+  color: #c76904;
+}
+
+.search {
+  width: 21px;
+  height: 21px;
+}
+/* Контент */
+.main-container {
+  display: grid;
+  grid-row: row3-start/row4-start;
+  grid-column: header-start/header-end;
+  grid-template-rows: [row3-start] 50% [extrarow-start] 50% [row4-start];
+  grid-template-columns: [header-start] 699px [extracolumn-start] 1fr [header-end];
+  background-image: url(./assets/images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-page {
+  display: grid;
+  grid-row: row3-start/extrarow-start;
+  grid-column: header-start/extracolumn-start;
+  margin-top: 73px;
+  margin-left: 25px;
+}
+
+.h1 {
+  color: #fff;
+  font-family: 'DM Serif Display', serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.text {
+  width: 470px;
+  height: 66px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.22px;
+}
+
+.btn {
+  width: 230px;
+  height: 75px;
+  border-radius: 18px;
+  background: #cda274;
+  box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.36px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Сайдбар */
+.sidebar-container {
+  display: grid;
+  grid-row: row5-start/row5-end;
+  grid-column: header-start/header-end;
+  grid-template-columns: [header-start] 1fr [med-column-start] 1fr [med-column-end] 1fr [header-end];
+  padding: 0 25px;
+  gap: 42px;
+  text-align: center;
+}
+
+.aside {
+  display: grid;
+  align-content: space-between;
+}
+
+/* 1й блок */
+.aside1 {
+  display: grid;
+  grid-row: row5-start/row5-end;
+  grid-column: header-start/med-column-start;
+  border: 1px solid;
+}
+
+/* 2й блок */
+.aside2 {
+  display: grid;
+  grid-row: row5-start/row5-end;
+  grid-column: med-column-start/med-column-end;
+}
+
+/* 3й блок */
+.aside3 {
+  display: grid;
+  grid-row: row5-start/row5-end;
+  grid-column: med-column-end/header-end;
+}
+
+.h6 {
+  color: #292f36;
+  font-family: 'DM Serif Display', serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.sidebar-container p {
+  color: #4d5053;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+
+.sidebar-container .read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-container a {
+  color: #4d5053;
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  text-decoration: none;
+}
