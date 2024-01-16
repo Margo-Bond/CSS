@@ -1,0 +1,82 @@
+@import './template';
+
+/* Весь контейнер */
+.all-container {
+  display: grid;
+  grid-template-rows: [row1-start] 10% [row2-start] 1fr [row3-start] 15% [row3-end];
+  grid-template-columns: [header-start main-start] 70% [main-end sidebar-start] 30% [sidebar-end header-end];
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(70, 69, 69);
+}
+
+/* Шапка */
+.header {
+  @include common(center, center, rgba(196, 206, 218, 0.4));
+  grid-row: row1-start/row2-start;
+  grid-column: header-start/header-end;
+}
+
+/* Контент */
+.container-main {
+  display: grid;
+  grid-row: row2-start/row3-start;
+  grid-column: main-start/main-end;
+  grid-template-rows: [row2-start] 1fr [extrarow-start] 1fr [extrarow-end] 1fr [row3-start];
+  grid-template-columns: [main-start] 1fr [mediumcolumn-start] 1fr [main-end];
+  gap: 20px 40px;
+  padding: 0 20px 20px 20px;
+  background-color: white;
+  background-color: rgba(254, 233, 233, 0.3);
+  .section {
+    @include common(center, start, white);
+    grid-row: row2-start/extrarow-start;
+    grid-column: main-start/main-end;
+    padding-top: 45px;
+  }
+  .article {
+    @include common(center, center, rgba(247, 219, 158, 0.3));
+  }
+  .article1 {
+    grid-row: extrarow-start/extrarow-end;
+    grid-column: main-start/mediumcolumn-start;
+  }
+  .article2 {
+    grid-row: extrarow-start/extrarow-end;
+    grid-column: mediumcolumn-start/main-end;
+  }
+  .article3 {
+    grid-row: extrarow-end/row3-start;
+    grid-column: main-start/main-end;
+  }
+}
+
+.sidebar {
+  @include common(none, start, rgba(17, 245, 17, 0.1));
+  grid-row: row2-start/row3-start;
+  grid-column: sidebar-start/sidebar-end;
+  text-align: center;
+  padding: 45px 20px 20px 20px;
+}
+
+/* Подвал */
+.container-footer {
+  display: grid;
+  grid-row: row3-start/row3-end;
+  grid-column: header-start/header-end;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  padding: 10px;
+  gap: 40px;
+  background-color: rgba(196, 206, 218, 0.4);
+  .block {
+    @include common(none, center, white);
+    display: grid;
+    height: 1fr;
+    text-align: center;
+  }
+}
