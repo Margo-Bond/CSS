@@ -1,0 +1,6 @@
+@mixin common($j-i, $a-i, $color) {
+  display: grid;
+  justify-items: $j-i;
+  align-items: $a-i;
+  background-color: $color;
+}
