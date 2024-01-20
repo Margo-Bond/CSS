@@ -1,0 +1,18 @@
+@mixin button($width, $height, $font-size) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: $fontInter;
+  font-weight: 600;
+  letter-spacing: 0.36px;
+  text-decoration: none;
+  border-radius: 18px;
+  background: $color-btn-burger;
+  box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+  border: none;
+  color: $color-text-white;
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+}

@@ -1,0 +1,1169 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/* Общие свойства */
+.all-containers {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: -moz-max-content;
+  height: max-content;
+  align-items: center;
+}
+
+/* Главная страница */
+.main-page-container {
+  display: grid;
+  grid-template-columns: [header-start] 1fr [header-end];
+  padding: 20px 0;
+}
+
+/* Шапка */
+.header-container {
+  display: grid;
+  grid-row: row1-start/row2-start;
+  grid-column: header-start/header-end;
+  grid-template-columns: [header-start] max-content [m-column-start] 60% [header-end];
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+.header-container .logo {
+  display: inline-flex;
+  grid-row: row1-start/row2-start;
+  grid-column: header-start/m-column-start;
+  justify-items: center;
+  align-items: center;
+}
+.header-container .logo p {
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  color: #292f36;
+}
+.header-container .nav {
+  display: inline-flex;
+  grid-row: row1-start/row2-start;
+  grid-column: m-column-start/header-end;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .nav a {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #292f36;
+}
+.header-container .nav .home,
+.header-container .menu__box .home {
+  color: #c76904;
+}
+
+/* Контент */
+.main-container {
+  display: grid;
+  grid-row: row3-start/row4-start;
+  grid-column: header-start/header-end;
+  grid-template-rows: [row3-start] 50% [extrarow-start] 50% [row4-start];
+  grid-template-columns: [header-start] 70% [extracolumn-start] 30% [header-end];
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-container .first-content {
+  display: grid;
+  grid-row: row3-start/extrarow-start;
+  grid-column: header-start/extracolumn-start;
+  margin-left: 25px;
+  gap: 20px;
+}
+.main-container .title1 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  color: #fff;
+}
+.main-container .slogan1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 150%;
+  color: #fff;
+}
+
+/* Сайдбар */
+.sidebar-container {
+  display: flex;
+  grid-row: row5-start/row5-end;
+  text-align: center;
+  align-items: center;
+  padding: 0 25px;
+}
+.sidebar-container .aside {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.sidebar-container .aside .subtitle {
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  color: #292f36;
+}
+.sidebar-container .aside p {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  text-align: center;
+  color: #4d5053;
+}
+.sidebar-container .aside .read {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-container .aside .read a {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  text-decoration: none;
+  color: #4d5053;
+  text-align: center;
+}
+
+/* 2я страница */
+.second-page-container {
+  display: flex;
+}
+
+.left-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-img {
+  right: 0;
+  width: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.second-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.second-content .title2 {
+  color: #fff;
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  line-height: 125%;
+}
+.second-content .slogan2 {
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.22px;
+}
+.second-content .slogan2 .italic-words {
+  font-style: italic;
+}
+.second-content .phone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.second-content .phone .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Jost", sans-serif;
+}
+.second-content .phone .contact a {
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.24px;
+  color: #fff;
+  text-decoration: none;
+}
+.second-content .phone .contact p {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+  color: #fff;
+}
+
+/* 3я страница */
+.third-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8a876;
+  border-radius: 50px;
+}
+
+.third-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 70%;
+  gap: 40px;
+}
+
+.title3 {
+  width: 60%;
+  text-align: center;
+  align-items: flex-start;
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.feedbacks {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+.feedbacks .feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+}
+.feedbacks .feedback .foto-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.feedbacks .feedback .foto-name img {
+  border-radius: 50%;
+}
+.feedbacks .feedback .foto-name .name {
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  letter-spacing: 0.22px;
+  color: #292f36;
+}
+.feedbacks .feedback .foto-name .from {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  color: #4d5053;
+}
+.feedbacks .feedback .foto-name .about {
+  display: flex;
+  flex-direction: column;
+}
+.feedbacks .feedback .comment {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  color: #4d5053;
+}
+
+/********************* 1440px< **********************/
+@media (min-width: 1440px) {
+  /* Главная страница */
+  .main-page-container {
+    grid-template-rows: [row1-start] 5% [row2-start] 80px [row3-start] 750px [row4-start] 90px [row5-start] 15% [row5-end];
+    width: 70%;
+  }
+  .main-container {
+    background-image: url("../assets/images/background-768-1440.png");
+  }
+  /* Шапка */
+  .header-container p {
+    font-size: 40px;
+  }
+  .header-container a {
+    font-size: 20px;
+  }
+  .header-container .search img {
+    width: 21px;
+    height: 21px;
+  }
+  /* Контент */
+  .first-content {
+    margin-top: 73px;
+  }
+  .first-content .title1 {
+    font-size: 65px;
+  }
+  .first-content .slogan1 {
+    font-size: 22px;
+  }
+  .first-content .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 230px;
+    height: 75px;
+    font-size: 18px;
+  }
+  /* Сайдбар */
+  .sidebar-container {
+    gap: 42px;
+  }
+  .sidebar-container .subtitle {
+    font-size: 25px;
+  }
+  .sidebar-container p {
+    font-size: 22px;
+    line-height: 150%;
+  }
+  .sidebar-container a {
+    font-size: 18px;
+  }
+  /* 2я страница */
+  .second-page-container {
+    width: 70%;
+    height: 700px;
+    margin-top: 120px;
+  }
+  .left-img {
+    width: 50%;
+    background-image: url("../assets/images/background2-1440.png");
+    background-position: right;
+  }
+  .right-img {
+    width: 50%;
+    background-image: url("../assets/images/background3-1440.png");
+    background-position: right;
+  }
+  .second-content {
+    width: 70%;
+  }
+  .second-content .title2 {
+    font-size: 55px;
+  }
+  .second-content .slogan2 {
+    font-size: 22px;
+    line-height: 150%;
+  }
+  .second-content .phone {
+    width: 277px;
+    padding-bottom: 30px;
+    height: 93px;
+  }
+  .second-content .phone a {
+    font-size: 24px;
+  }
+  .second-content .phone p {
+    font-size: 22px;
+  }
+  .second-content .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 230px;
+    height: 75px;
+    font-size: 18px;
+  }
+  /* 3я страница */
+  .third-page-container {
+    width: 70%;
+    height: 700px;
+    margin-top: 120px;
+  }
+  .title3 {
+    font-size: 50px;
+  }
+  .feedbacks {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .feedbacks .feedback {
+    width: 32%;
+  }
+  .feedbacks .feedback .name {
+    font-size: 22px;
+    line-height: 150%;
+  }
+  .feedbacks .feedback .from {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .feedbacks .feedback .comment {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+/********************* 1024-1439px **********************/
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Главная страница */
+  .main-page-container {
+    grid-template-rows: [row1-start] 5% [row2-start] 60px [row3-start] 550px [row4-start] 60px [row5-start] 19% [row5-end];
+    width: 75%;
+  }
+  .main-container {
+    background-image: url("../assets/images/background-768-1440.png");
+  }
+  /* Шапка */
+  .header-container p {
+    font-size: 34px;
+  }
+  .header-container a {
+    font-size: 18px;
+  }
+  .header-container .search img {
+    width: 16px;
+    height: 16px;
+  }
+  /* Контент */
+  .first-content {
+    margin-top: 50px;
+  }
+  .first-content .title1 {
+    font-size: 54px;
+  }
+  .first-content .slogan1 {
+    font-size: 18px;
+  }
+  .first-content .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 210px;
+    height: 68px;
+    font-size: 18px;
+  }
+  /* Сайдбар */
+  .sidebar-container {
+    gap: 36px;
+  }
+  .sidebar-container .subtitle {
+    font-size: 20px;
+  }
+  .sidebar-container p {
+    font-size: 18px;
+  }
+  .sidebar-container a {
+    font-size: 16px;
+  }
+  /* 2я страница */
+  .second-page-container {
+    height: 550px;
+    margin-top: 100px;
+    width: 75%;
+  }
+  .left-img {
+    width: 50%;
+    background-image: url("../assets/images/background2-768-1024.png");
+  }
+  .right-img {
+    width: 50%;
+    background-image: url("../assets/images/background3-768-1024.png");
+    background-position: center;
+  }
+  .second-content {
+    width: 75%;
+  }
+  .second-content .title2 {
+    font-size: 40px;
+  }
+  .second-content .slogan2 {
+    font-size: 22px;
+    line-height: 100%;
+  }
+  .second-content .phone {
+    width: 250px;
+    height: 70px;
+  }
+  .second-content .phone img {
+    width: 70px;
+  }
+  .second-content .phone .contact a {
+    font-size: 20px;
+  }
+  .second-content .phone .contact p {
+    font-size: 18px;
+  }
+  .second-content .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 200px;
+    height: 70px;
+    font-size: 16px;
+  }
+  /* 3я страница */
+  .third-page-container {
+    width: 75%;
+    height: 550px;
+    margin-top: 100px;
+  }
+  .title3 {
+    font-size: 40px;
+  }
+  .feedbacks {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .feedbacks .feedback {
+    width: 32%;
+  }
+  .feedbacks .feedback .name {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .from {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .comment {
+    font-size: 18px;
+    line-height: 100%;
+  }
+}
+/********************* 768-1023px **********************/
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Главная страница */
+  .main-page-container {
+    grid-template-rows: [row1-start] 5% [row2-start] 50px [row3-start] 350px [row4-start] 30px [row5-start] 19% [row5-end];
+    width: 80%;
+  }
+  .main-container {
+    background-image: url("../assets/images/background-768-1440.png");
+  }
+  /* Шапка */
+  .header-container .logo img {
+    width: 30px;
+  }
+  .header-container p {
+    font-size: 24px;
+  }
+  .header-container a {
+    font-size: 16px;
+  }
+  .header-container .search img {
+    width: 14px;
+    height: 14px;
+  }
+  /* Контент */
+  .first-content {
+    margin-top: 42px;
+  }
+  .first-content .title1 {
+    font-size: 40px;
+  }
+  .first-content .slogan1 {
+    font-size: 16px;
+  }
+  .first-content .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 160px;
+    height: 56px;
+    font-size: 16px;
+  }
+  /* Сайдбар */
+  .sidebar-container {
+    gap: 30px;
+  }
+  .sidebar-container .subtitle {
+    font-size: 16px;
+  }
+  .sidebar-container p {
+    font-size: 14px;
+    line-height: 100%;
+  }
+  .sidebar-container a {
+    font-size: 14px;
+  }
+  /* 2я страница */
+  .second-page-container {
+    height: 350px;
+    margin-top: 50px;
+    width: 80%;
+  }
+  .left-img {
+    width: 50%;
+    background-image: url("../assets/images/background2-768.png");
+    background-position: center;
+  }
+  .right-img {
+    width: 50%;
+    background-image: url("../assets/images/background3-768-1024.png");
+    background-position: center;
+  }
+  .second-content {
+    width: 75%;
+  }
+  .second-content .title2 {
+    font-size: 28px;
+    line-height: 100%;
+  }
+  .second-content .slogan2 {
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .second-content .phone {
+    width: 250px;
+    height: 70px;
+  }
+  .second-content .phone img {
+    width: 50px;
+  }
+  .second-content .phone .contact a {
+    font-size: 16px;
+  }
+  .second-content .phone .contact p {
+    font-size: 16px;
+  }
+  .second-content .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 160px;
+    height: 50px;
+    font-size: 12px;
+  }
+  /* 3я страница */
+  .third-page-container {
+    width: 80%;
+    height: 400px;
+    margin-top: 60px;
+  }
+  .title3 {
+    font-size: 28px;
+  }
+  .feedbacks {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .feedbacks .feedback {
+    width: 32%;
+    padding: 20px;
+  }
+  .feedbacks .feedback img {
+    width: 50px;
+  }
+  .feedbacks .feedback .name {
+    font-size: 14px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .from {
+    font-size: 14px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .comment {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+/********************* 500-767px **********************/
+@media (min-width: 500px) and (max-width: 767px) {
+  /* Главная страница */
+  .main-page-container {
+    grid-template-rows: [row1-start] 7% [row2-start] 30px [row3-start] 300px [row4-start] 30px [row5-start] 22% [row5-end];
+    width: 90%;
+  }
+  .main-container {
+    background-image: url("../assets/images/background-425-767.png");
+    border-radius: 25px 0;
+  }
+  /* Шапка */
+  .header-container .logo img {
+    width: 30px;
+  }
+  .header-container .logo p {
+    font-size: 20px;
+  }
+  .header-container .nav a {
+    font-size: 14px;
+  }
+  .header-container .search img {
+    width: 14px;
+    height: 14px;
+  }
+  /* Контент */
+  .first-content {
+    margin-top: 30px;
+  }
+  .first-content .title1 {
+    font-size: 24px;
+  }
+  .first-content .slogan1 {
+    font-size: 14px;
+  }
+  .first-content .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+  .first-content .btn1 img {
+    width: 12px;
+  }
+  /* Сайдбар */
+  .sidebar-container {
+    gap: 20px;
+  }
+  .sidebar-container .subtitle {
+    font-size: 14px;
+  }
+  .sidebar-container p {
+    font-size: 11px;
+    line-height: 100%;
+  }
+  .sidebar-container a {
+    font-size: 10px;
+  }
+  .sidebar-container img {
+    width: 12px;
+  }
+  /* 2я страница */
+  .second-page-container {
+    justify-content: center;
+    height: 300px;
+    margin-top: 60px;
+    width: 90%;
+  }
+  .left-img {
+    background-image: url("../assets/images/background2-425-767.png");
+  }
+  .title2 {
+    font-size: 25px;
+    line-height: 100%;
+  }
+  .second-content {
+    width: 60%;
+    gap: 10px;
+  }
+  .second-content .slogan2 {
+    font-size: 15px;
+    line-height: 100%;
+  }
+  .second-content .phone {
+    width: 250px;
+    height: 60px;
+  }
+  .second-content .phone img {
+    width: 40px;
+  }
+  .second-content .phone a {
+    font-size: 14px;
+  }
+  .second-content .phone p {
+    font-size: 14px;
+  }
+  .second-content .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 140px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+  .second-content .btn2 img {
+    width: 12px;
+  }
+  /* 3я страница */
+  .third-page-container {
+    width: 90%;
+    height: 300px;
+    margin-top: 60px;
+  }
+  .third-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 80%;
+    gap: 20px;
+  }
+  .title3 {
+    font-size: 21px;
+  }
+  .feedbacks {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .feedbacks .feedback {
+    padding: 10px;
+  }
+  .feedbacks .feedback .foto-name img {
+    width: 40px;
+  }
+  .feedbacks .feedback .foto-name .name {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .foto-name .from {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .comment {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+/********************* 320-499px **********************/
+@media (min-width: 320px) and (max-width: 499px) {
+  .nav {
+    display: none;
+  }
+  /* Главная страница */
+  .main-page-container {
+    grid-template-rows: [row1-start] 7% [row2-start] 30px [row3-start] 300px [row4-start] 25px [row5-start] 17% [row5-end];
+    width: 90%;
+  }
+  .main-container {
+    background-image: url("../assets/images/background-425-767.png");
+    border-radius: 25px 0;
+  }
+  /* Шапка */
+  .logo img {
+    width: 28px;
+  }
+  .logo p {
+    font-size: 20px;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    right: 5%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #cda274;
+    transition-duration: 0.25s;
+  }
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 20px;
+    right: -100%;
+    width: 200px;
+    height: -moz-max-content;
+    height: max-content;
+    margin: 0;
+    list-style: none;
+    background-color: rgba(244, 225, 204, 0.5843137255);
+    box-shadow: -1px 0px 6px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.25s;
+  }
+  .menu__box .menu__item {
+    display: block;
+    padding: 5px 5px;
+    color: #292f36;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.25s;
+  }
+  .menu__box .menu__item:hover {
+    background-color: rgba(235, 195, 142, 0.3137254902);
+  }
+  /* Контент */
+  .first-content {
+    margin-top: 30px;
+  }
+  .first-content .title1 {
+    font-size: 24px;
+  }
+  .first-content .slogan1 {
+    font-size: 14px;
+  }
+  .first-content .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+  .first-content .btn1 mg {
+    width: 12px;
+  }
+  /* Сайдбар */
+  .sidebar-container {
+    padding: 0;
+    justify-content: space-between;
+  }
+  .sidebar-container .aside {
+    justify-content: center;
+    gap: 15px;
+  }
+  .sidebar-container .aside .subtitle {
+    font-size: 14px;
+  }
+  .sidebar-container .aside a {
+    font-size: 10px;
+  }
+  .sidebar-container .aside img {
+    width: 12px;
+  }
+  /* 2я страница */
+  .second-page-container {
+    justify-content: center;
+    height: 300px;
+    margin-top: 30px;
+    width: 90%;
+  }
+  .left-img {
+    background-image: url("../assets/images/background2-425-767.png");
+  }
+  .second-content {
+    width: 60%;
+    gap: 10px;
+  }
+  .second-content .title2 {
+    font-size: 20px;
+    line-height: 100%;
+  }
+  .second-content .slogan2 {
+    font-size: 15px;
+    line-height: 100%;
+  }
+  .second-content .phone {
+    width: 250px;
+    height: 60px;
+  }
+  .second-content .phone img {
+    width: 36px;
+  }
+  .second-content .phone a {
+    font-size: 12px;
+  }
+  .second-content .phone p {
+    font-size: 12px;
+  }
+  .second-content .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    text-decoration: none;
+    border-radius: 18px;
+    background: #cda274;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    border: none;
+    color: #fff;
+    width: 140px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+  .second-content .btn2 img {
+    width: 12px;
+  }
+  /* 3я страница */
+  .third-page-container {
+    width: 90%;
+    height: -moz-max-content;
+    height: max-content;
+    margin-top: 30px;
+  }
+  .third-content {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+  }
+  .title3 {
+    font-size: 21px;
+  }
+  .feedbacks {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .feedbacks .feedback {
+    width: 80%;
+    padding: 15px;
+  }
+  .feedbacks .feedback .foto-name img {
+    width: 40px;
+  }
+  .feedbacks .feedback .foto-name .name {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .foto-name .from {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .feedbacks .feedback .foto-name .about {
+    gap: 5px;
+  }
+  .feedbacks .feedback .comment {
+    font-size: 12px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .right-img {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+@media (max-width: 499px) {
+  .sidebar-container p {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
