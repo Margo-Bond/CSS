@@ -2,13 +2,14 @@
   display: grid;
   width: 100%;
   height: max-content;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 150px);
   gap: 30px;
   padding: 30px;
-  background: url('../assets/images/background.jpeg');
+  background-image: url('../assets/images/background.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 .citrus {
