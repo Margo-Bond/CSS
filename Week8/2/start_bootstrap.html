@@ -7,15 +7,16 @@
       content="width=device-width, initial-scale=1.0"
       shrink-to-fit="no"
     />
-    <link rel="stylesheet" href="./style/normalize.css" />
-    <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
     <title>Start Bootstrap</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row header bg-dark">
-        <div class="col d-flex justify-content-between align-items-center p-0">
+    <div class="container-fluid vh-100">
+      <!-- Шапка -->
+      <div class="row bg-dark fs-5 header">
+        <div
+          class="col d-flex justify-content-between align-items-center p-0 header-column"
+        >
           <div class="navbar-brand text-white">Start Bootstrap</div>
           <div class="nav d-flex px-0">
             <a class="nav-link active" href="#">Home</a>
@@ -25,9 +26,10 @@
           </div>
         </div>
       </div>
+      <!-- Main -->
       <div class="row main">
-        <div class="col bg px-4 py-5">
-          <h1 class="fs-1">A Warm Welcome!</h1>
+        <div class="col px-4 py-4 main-column">
+          <h1 class="h1">A Warm Welcome!</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
             ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid
@@ -37,76 +39,97 @@
           <button type="button" class="btn btn-primary">Call to action!</button>
         </div>
       </div>
-    </div>
-    <div class="container-fluid cont px-0 me-0">
-      <div class="row row-cols-2 row-cols-md-4 g-2 cards">
-        <div class="col-3">
+      <!-- Карточки -->
+      <div class="row cards">
+        <!-- 1я колонка -->
+        <div class="col-lg-3 col-sm-6 mb-4">
           <div class="card">
             <img
-              src="./assits/images/common-img.jpg"
+              src="./assits/images/img.jpg"
               class="card-img-top"
               alt="Image"
             />
             <div class="card-body">
-              <h5 class="card-title">Заголовок карточки</h5>
+              <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Небольшой пример текста, который должен основываться на названии
-                карточки и составлять основную часть содержимого карты.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sapiente esse necessitatibus neque.
               </p>
-              <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find out more!</a>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <!-- 2я колонка -->
+        <div class="col-lg-3 col-sm-6 mb-4">
           <div class="card">
             <img
-              src="./assits/images/common-img.jpg"
+              src="./assits/images/img.jpg"
               class="card-img-top"
               alt="Image"
             />
             <div class="card-body">
-              <h5 class="card-title">Заголовок карточки</h5>
+              <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Небольшой пример текста, который должен основываться на названии
-                карточки и составлять основную часть содержимого карты.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Explicado magni sapiente, tempore debitis beatae culpa natus
+                architecto.
               </p>
-              <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find out more!</a>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <!-- 3я колонка -->
+        <div class="col-lg-3 col-sm-6 mb-4">
           <div class="card">
             <img
-              src="./assits/images/common-img.jpg"
+              src="./assits/images/img.jpg"
               class="card-img-top"
               alt="Image"
             />
             <div class="card-body">
-              <h5 class="card-title">Заголовок карточки</h5>
+              <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Небольшой пример текста, который должен основываться на названии
-                карточки и составлять основную часть содержимого карты.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sapiente esse necessitatibus neque.
               </p>
-              <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find out more!</a>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <!-- 4я колонка -->
+        <div class="col-lg-3 col-sm-6 mb-4">
           <div class="card">
             <img
-              src="./assits/images/common-img.jpg"
+              src="./assits/images/img.jpg"
               class="card-img-top"
               alt="Image"
             />
             <div class="card-body">
-              <h5 class="card-title">Заголовок карточки</h5>
+              <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Небольшой пример текста, который должен основываться на названии
-                карточки и составлять основную часть содержимого карты.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Explicado magni sapiente, tempore debitis beatae culpa natus
+                architecto.
               </p>
-              <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find out more!</a>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- Подвал -->
+      <div class="row bg-dark fs-6 footer">
+        <div
+          class="col d-flex justify-content-center align-items-end text-white"
+        >
+          <p class="footer-text">Copyright © Your Website 2019</p>
         </div>
       </div>
     </div>
