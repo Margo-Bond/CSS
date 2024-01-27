@@ -18,7 +18,6 @@
   grid-template-rows: [row1-start] 50px [row2-start] 80px [row3-start] 760px [row4-start] 90px [row5-start] 200px [row5-end];
   grid-template-columns: [header-start] 1210px [header-end];
   justify-content: center;
-  min-width: 1210px;
   padding: 20px 0;
 }
 
@@ -27,7 +26,7 @@
   display: grid;
   grid-row: row1-start/row2-start;
   grid-column: header-start/header-end;
-  grid-template-columns: [header-start] 1fr [m-column-start] 300px [m-column-end] 2fr [header-end];
+  grid-template-columns: [header-start] 25% [m-column-start] 1fr [m-column-end] 50% [header-end];
 }
 
 .logo {
