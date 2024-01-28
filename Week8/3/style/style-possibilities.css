@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/* Шапка */
+@import url("https://fonts.cdnfonts.com/css/helvetica-255");
+@import url("https://fonts.cdnfonts.com/css/roboto-slab-2");
+@import url("https://fonts.cdnfonts.com/s/14111/IntroDemoBlackCaps.woff");
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  background-image: url("../assits/images/browser.png");
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.header .header__title {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 400;
+  opacity: 0.5;
+  color: #000;
+}
+
+/* Логотип */
+.logo {
+  position: relative;
+  width: 201px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 76px;
+}
+
+/* Кнопка */
+.subscribe a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  font-family: "Intro Demo", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  background: #5222d0;
+  color: #fff;
+}
+
+/* Корзина */
+.basket {
+  position: absolute;
+  display: flex;
+  top: 89px;
+  right: 74px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 115px;
+  height: 38px;
+  font-family: "Intro Demo", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 100px;
+  background: #5222d0;
+}
+
+/* Шапка */
+/* Контент */
+.title {
+  display: block;
+  margin-top: 30px;
+  margin-left: 126px;
+  width: 542px;
+  box-sizing: border-box;
+  font-family: "Intro Demo", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #000;
+}
+
+.wrap {
+  margin-top: 14px;
+  padding-left: 100px;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.column {
+  padding: 25px 40px 25px 35px;
+}
+.column .card-box {
+  height: 100%;
+  border: none;
+}
+.column .card-box .card-box__chemist {
+  position: relative;
+  left: 10%;
+  bottom: -10%;
+  width: 80%;
+}
+.column .card-box .card-box__robot {
+  position: relative;
+  left: 10%;
+  margin-bottom: -5%;
+  width: 80%;
+}
+.column .card-box .card-box__worker {
+  position: relative;
+  left: 5%;
+  top: 5%;
+  bottom: -20%;
+  width: 90%;
+}
+.column .card-box__top {
+  background-image: url("../assits/images/bg.png");
+}
+.column .card-box__title {
+  margin-bottom: 10px;
+  font-family: "Intro Demo", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #000;
+}
+.column .card-box__body .card-box__title:nth-child(-n+3) {
+  margin-top: 40px;
+}
+.column .card-box__text {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 160%;
+  color: #000;
+}
+
+.column:last-of-type {
+  padding: 0 40px 0 35px;
+}
+
+.subscribe {
+  padding: 25px 22px 40px 18px;
+  background-image: url("../assits/images/bg6.png");
+}
+.subscribe .subscribe__title {
+  font-family: "Intro Demo", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #fff;
+}
+.subscribe a {
+  width: 40%;
+  height: 38px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 6% 6%;
+}
+.subscribe .subscribe__input {
+  width: 90%;
+  height: 50px;
+}
+
+/* Корзина */
+/* Навигация */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 50px 0 50px 126px;
+}
+.nav a {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 160%;
+  color: #5222d0;
+  text-decoration: none;
+}/*# sourceMappingURL=style-possibilities.css.map */
