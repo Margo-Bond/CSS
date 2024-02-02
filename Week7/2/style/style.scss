@@ -44,7 +44,6 @@
   }
 
   .nav {
-    display: inline-flex;
     grid-row: row1-start/row2-start;
     grid-column: m-column-start/header-end;
     justify-content: space-between;
@@ -301,6 +300,9 @@
       width: 21px;
       height: 21px;
     }
+    .nav {
+      display: inline-flex;
+    }
   }
 
   /* Контент */
@@ -431,6 +433,9 @@
     .search img {
       width: 16px;
       height: 16px;
+    }
+    .nav {
+      display: inline-flex;
     }
   }
 
@@ -565,6 +570,9 @@
     .search img {
       width: 14px;
       height: 14px;
+    }
+    .nav {
+      display: inline-flex;
     }
   }
 
@@ -701,8 +709,11 @@
     .logo p {
       font-size: 20px;
     }
-    .nav a {
-      font-size: 14px;
+    .nav {
+      display: inline-flex;
+      a {
+        font-size: 14px;
+      }
     }
     .search img {
       width: 14px;
