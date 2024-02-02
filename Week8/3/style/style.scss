@@ -6,96 +6,427 @@
 /* Шапка */
 .header {
   @extend %header;
-  .header__title {
-    @extend %header-title;
+  .basket {
+    @extend %basket-style;
   }
 }
 
-/* Контент */
-.logo {
-  @extend %logo;
-}
+/********************** >1440px **********************/
+@media (min-width: 1440px) {
+  .pic {
+    display: none;
+  }
+  /* Шапка */
+  .header {
+    margin-top: 50px;
+    margin-left: 76px;
+    margin-right: 74px;
+    height: 15%;
+    .logo {
+      width: 201px;
+      height: 40px;
+    }
+  }
 
-.main__content {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-top: 30px;
-  margin-left: 126px;
-  .main__title {
-    margin: 0;
-    font-family: 'Intro Demo', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 120%;
-    color: #000;
-  }
-  .main__text {
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 160%;
-    color: #000;
-  }
-  a {
+  /* Общие контейнеры */
+  .whole-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 240px;
-    height: 70px;
-    gap: 20px;
-    border-radius: 50px;
-    font-family: 'Intro Demo', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    background-color: #5222d0;
-    color: #fff;
-  }
-}
-
-/* Корзина */
-.basket {
-  @extend %basket-style;
-}
-/* Навигация */
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 60px;
-  margin-left: 126px;
-
-  a {
-    padding: 0 10px;
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 160%;
-    color: #5222d0;
-    text-decoration: none;
-  }
-}
-
-.whole-container {
-  display: flex;
-  width: 100%;
-  height: 80vh;
-  overflow-x: hidden;
-  .left-part {
-    width: 50%;
-    height: 90%;
-  }
-  .right-part {
-    width: 50%;
-    height: 90%;
-    background-image: url('../assits/images/grey.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    overflow-y: hidden;
-    img {
+    width: 100%;
+    height: 80vh;
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40%;
+      margin-left: 126px;
       height: 100%;
-      margin-left: 100px;
+    }
+    .right-part {
+      width: 60%;
+      height: 100%;
+      background-image: url('../assits/images/grey.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      img {
+        max-width: 55%;
+        height: auto;
+        margin-top: 30px;
+        margin-left: 100px;
+      }
+    }
+  }
+
+  /* Контент */
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 30px;
+    .main__title {
+      margin: 0;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 120%;
+      color: #000;
+    }
+    .main__text {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #000;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
+      height: 80px;
+      gap: 20px;
+      border-radius: 50px;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      background-color: #5222d0;
+      color: #fff;
+    }
+  }
+
+  //* Навигация *//
+  .main__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    a {
+      padding: 0 5px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #5222d0;
+      text-decoration: none;
+    }
+  }
+}
+
+/********************** 1024-1439px**********************/
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .pic {
+    display: none;
+  }
+  /* Шапка */
+  .header {
+    margin-top: 50px;
+    margin-left: 55px;
+    margin-right: 55px;
+    height: 15%;
+    .logo {
+      width: 201px;
+      height: 40px;
+    }
+  }
+
+  /* Общие контейнеры */
+  .whole-container {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 40px;
+      margin-left: 105px;
+      width: 45%;
+      height: 100%;
+    }
+    .right-part {
+      width: 55%;
+      height: 100%;
+      background-image: url('../assits/images/grey.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      img {
+        width: auto;
+        max-height: 100%;
+        margin-top: 30px;
+        margin-left: 70px;
+      }
+    }
+  }
+
+  /* Контент */
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 30px;
+    .main__title {
+      margin: 0;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 120%;
+      color: #000;
+    }
+    .main__text {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #000;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 210px;
+      height: 60px;
+      gap: 20px;
+      border-radius: 50px;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      text-decoration: none;
+      background-color: #5222d0;
+      color: #fff;
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  //* Навигация *//
+  .main__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    a {
+      padding: 0 5px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #5222d0;
+      text-decoration: none;
+    }
+  }
+}
+
+/********************** 768-1023px **********************/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pic {
+    display: none;
+  }
+  /* Шапка */
+  .header {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 15%;
+    .logo {
+      width: 180px;
+      height: 36px;
+    }
+    .basket {
+      width: 110px;
+      height: 34px;
+      font-size: 12px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+
+  /* Общие контейнеры */
+  .whole-container {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 40px;
+      margin-left: 64px;
+      width: 45%;
+      height: 100%;
+    }
+    .right-part {
+      width: 55%;
+      height: 100%;
+      background-image: url('../assits/images/grey.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      img {
+        width: auto;
+        max-height: 90%;
+        margin-top: 30px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  /* Контент */
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 50px;
+    .main__title {
+      margin: 0;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 120%;
+      color: #000;
+    }
+    .main__text {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #000;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 50px;
+      gap: 15px;
+      border-radius: 50px;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      background-color: #5222d0;
+      color: #fff;
+      img {
+        width: 28px;
+      }
+    }
+  }
+
+  //* Навигация *//
+  .main__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    a {
+      padding: 0 5px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #5222d0;
+      text-decoration: none;
+    }
+  }
+}
+
+/********************** <767px **********************/
+@media (max-width: 767px) {
+  .right-part {
+    display: none;
+  }
+  /* Шапка */
+  .header {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100% - 10px);
+    .logo {
+      width: 180px;
+      height: 36px;
+    }
+    .basket {
+      width: 110px;
+      height: 34px;
+      font-size: 12px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+
+  /* Общие контейнеры */
+  .whole-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    .main {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 5px 5px 5px;
+    }
+  }
+
+  /* Контент */
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    .main__title {
+      margin: 0;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 120%;
+      color: #000;
+    }
+    .main__text {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #000;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 50px;
+      gap: 15px;
+      border-radius: 50px;
+      font-family: 'Intro Demo', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      background-color: #5222d0;
+      color: #fff;
+      img {
+        width: 24px;
+      }
+    }
+  }
+
+  .pic {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    img {
+      max-width: 70%;
+      height: auto;
+      margin-top: -30px;
+    }
+  }
+
+  //* Навигация *//
+  .main__nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-family: 'Roboto Slab', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 160%;
+      color: #5222d0;
+      text-decoration: none;
     }
   }
 }

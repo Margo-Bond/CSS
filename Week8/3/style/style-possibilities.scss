@@ -5,16 +5,21 @@
 
 /* Шапка */
 .header {
+  margin-top: 50px;
+  margin-left: 76px;
+  margin-right: 74px;
+  height: 15%;
   @extend %header;
-  .header__title {
-    @extend %header-title;
+  .logo {
+    width: 201px;
+    height: 40px;
+  }
+  .basket {
+    @extend %basket-style;
   }
 }
-/* Контент */
-.logo {
-  @extend %logo;
-}
 
+/* Контент */
 .title {
   display: block;
   margin-top: 30px;
@@ -110,17 +115,11 @@
   }
 }
 
-/* Корзина */
-.basket {
-  @extend %basket-style;
-}
-
 /* Навигация */
 .nav {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  margin: 50px 0 50px 126px;
+  margin: 50px 126px 50px 126px;
   a {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 20px;
@@ -128,5 +127,36 @@
     line-height: 160%;
     color: #5222d0;
     text-decoration: none;
+  }
+}
+
+/***************************** <767px **************************/
+@media (max-width: 767px) {
+  /* Шапка */
+  .header {
+    margin: 0;
+    padding: 20px 10px;
+    width: 100%;
+  }
+
+  /* Контент */
+  .title {
+    margin: 0 0 0 30px;
+    font-size: 40px;
+  }
+
+  .wrap {
+    margin-top: 14px;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Навигация */
+  .nav {
+    margin: 50px auto;
+    width: 90%;
+    a {
+      font-size: 20px;
+    }
   }
 }
